@@ -492,7 +492,7 @@ $runAnsable = ("
 
 cd /home/shawn/a/ansible-alliance-master/SCTM-DFO-IaaS/
 
-ansible-playbook -i " + $IP + ", Windows_ULL.yml -v -e private_ip=" + $IP +" -e target=all -e ansible_connection=winrm -e ansible_user=crcadmin -e ansible_password=p -e ansible_winrm_transport=ssl"
+ansible-playbook -i " + $IP + ", Windows_ULL.yml -v -e private_ip=" + $IP +" -e target=all -e ansible_connection=winrm -e ansible_user= -e ansible_password= -e ansible_winrm_transport=ssl"
 )
 
 $runAnsable | Out-File -Width 4096 -FilePath .\runAnsable.sh; cat .\runAnsable.sh; #TEST
